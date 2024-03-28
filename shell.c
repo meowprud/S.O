@@ -39,30 +39,30 @@ int main(int argc, char **argv){
         //funcoes: getline() ; strtok(); strsep().
 
         do{
-            line = leitura();
+            linha = leitura();
 
-            if(!line){
+            if(!linha){
                 exit(EXIT_SUCCESS);
             }
 
-            if(line[0] = '\0' || strcmp(line, '\n')==0){
-                free(line);
+            if(linha[0] = '\0' || strcmp(linha, '\n')==0){
+                free(linha);
                 continue;
             }
-            if(strcmp(line, 'exit\n')){
-                free(line);
+            if(strcmp(linha, 'exit\n')){
+                free(linha);
                 break;
             }
 
-        printf("%s\n", line);
+        printf("%s\n", linha);
         
             
         }while(1);
 
-        exit(EXIT_SUCCESS)
+        exit(EXIT_SUCCESS);
         
         linha = leitura();
-        argumentos = args(line);
+        argumentos = args(linha);
 
         if(strstr(buf, "&")){
 
